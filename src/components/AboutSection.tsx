@@ -12,7 +12,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onNavigate, onOpenCV
     <section id="about" className="py-20 md:py-28 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <FadeUp delay={0}>
+        <FadeUp delay={0} variant="fade-down">
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#fa5a02]/10 border border-[#fa5a02]/30 text-[#fa5a02] text-xs sm:text-sm font-semibold mb-3">
               <i className="fas fa-user text-xs" />
@@ -29,7 +29,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onNavigate, onOpenCV
         </FadeUp>
 
         {/* Main Presentation Feature Card */}
-        <FadeUp delay={100}>
+        <FadeUp delay={100} variant="zoom-up">
           <div className="card-hover-effect relative p-6 sm:p-10 rounded-3xl bg-gradient-to-br from-[#181818] via-[#141414] to-[#101010] border border-[#2a2a2a] shadow-2xl mb-12 overflow-hidden">
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5 mb-8">
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#fa5a02] to-[#c73e00] flex items-center justify-center text-white text-2xl font-black shadow-lg shadow-[#fa5a02]/30 flex-shrink-0">
@@ -72,8 +72,8 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onNavigate, onOpenCV
 
         {/* Thematic Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          {/* Card 1: Mon Parcours & Philosophie */}
-          <FadeUp delay={120} className="h-full">
+          {/* Card 1: Mon Parcours & Philosophie with Zoom-In */}
+          <FadeUp delay={120} variant="zoom-in" className="h-full">
             <div className="card-hover-effect p-7 rounded-2xl bg-[#161616] border border-[#262626] relative group shadow-lg h-full flex flex-col justify-between">
               <div>
                 <div className="flex items-center gap-3.5 mb-5">
@@ -105,8 +105,8 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onNavigate, onOpenCV
             </div>
           </FadeUp>
 
-          {/* Card 2: Méthodologie de Travail */}
-          <FadeUp delay={240} className="h-full">
+          {/* Card 2: Méthodologie de Travail with Fade-Up */}
+          <FadeUp delay={240} variant="fade-up" className="h-full">
             <div className="card-hover-effect p-7 rounded-2xl bg-[#161616] border border-[#262626] relative group shadow-lg h-full flex flex-col justify-between">
               <div>
                 <div className="flex items-center gap-3.5 mb-5">
@@ -140,7 +140,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onNavigate, onOpenCV
         </div>
 
         {/* Detailed Competencies Categories */}
-        <FadeUp delay={100}>
+        <FadeUp delay={100} variant="zoom-in">
           <div className="p-7 sm:p-9 rounded-3xl bg-[#141414] border border-[#282828] shadow-xl mb-12">
             <div className="flex items-center justify-between flex-wrap gap-4 mb-8">
               <div>
@@ -195,7 +195,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onNavigate, onOpenCV
         </FadeUp>
 
         {/* Ready for Challenge Callout */}
-        <FadeUp delay={150}>
+        <FadeUp delay={150} variant="zoom-up">
           <div className="card-hover-effect p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-[#fa5a02]/20 via-[#c73e00]/15 to-[#fa5a02]/10 border border-[#fa5a02]/30 text-center flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
             <div className="text-left">
               <h4 className="text-xl sm:text-2xl font-bold text-white flex items-center gap-2.5">

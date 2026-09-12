@@ -7,7 +7,7 @@ export const ContactSection: React.FC = () => {
     <section id="contact" className="py-20 md:py-28 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <FadeUp delay={0}>
+        <FadeUp delay={0} variant="fade-down">
           <div className="text-center mb-14 sm:mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#fa5a02]/10 border border-[#fa5a02]/30 text-[#fa5a02] text-xs sm:text-sm font-semibold mb-3">
               <i className="fas fa-envelope text-xs" />
@@ -23,10 +23,10 @@ export const ContactSection: React.FC = () => {
           </div>
         </FadeUp>
 
-        {/* Horizontal Contact Cards Grid with Staggered Fade-Up */}
+        {/* Horizontal Contact Cards Grid with Dynamic Animation Variants */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
-          {/* Card 1: Téléphone */}
-          <FadeUp delay={80} className="h-full">
+          {/* Card 1: Téléphone with Zoom-Up */}
+          <FadeUp delay={80} variant="zoom-up" className="h-full">
             <div
               id="contact-card-phone"
               className="card-hover-effect group relative rounded-3xl bg-gradient-to-b from-[#181818] to-[#121212] border border-[#2a2a2a] p-6 shadow-xl flex flex-col justify-between h-full"
@@ -58,8 +58,8 @@ export const ContactSection: React.FC = () => {
             </div>
           </FadeUp>
 
-          {/* Card 2: WhatsApp */}
-          <FadeUp delay={160} className="h-full">
+          {/* Card 2: WhatsApp with Zoom-In */}
+          <FadeUp delay={160} variant="zoom-in" className="h-full">
             <div
               id="contact-card-whatsapp"
               className="card-hover-effect group relative rounded-3xl bg-gradient-to-b from-[#181818] to-[#121212] border border-[#2a2a2a] p-6 shadow-xl flex flex-col justify-between h-full"
@@ -99,8 +99,8 @@ export const ContactSection: React.FC = () => {
             </div>
           </FadeUp>
 
-          {/* Card 3: Email */}
-          <FadeUp delay={240} className="h-full">
+          {/* Card 3: Email with Fade-Down */}
+          <FadeUp delay={240} variant="fade-down" className="h-full">
             <div
               id="contact-card-email"
               className="card-hover-effect group relative rounded-3xl bg-gradient-to-b from-[#181818] to-[#121212] border border-[#2a2a2a] p-6 shadow-xl flex flex-col justify-between h-full"
@@ -132,8 +132,8 @@ export const ContactSection: React.FC = () => {
             </div>
           </FadeUp>
 
-          {/* Card 4: Localisation */}
-          <FadeUp delay={320} className="h-full">
+          {/* Card 4: Localisation with Zoom-Up */}
+          <FadeUp delay={320} variant="zoom-up" className="h-full">
             <div
               id="contact-card-location"
               className="card-hover-effect group relative rounded-3xl bg-gradient-to-b from-[#181818] to-[#121212] border border-[#2a2a2a] p-6 shadow-xl flex flex-col justify-between h-full"
@@ -165,7 +165,7 @@ export const ContactSection: React.FC = () => {
         </div>
 
         {/* Horizontal Connectivity & Social Bar with Ambient Styling */}
-        <FadeUp delay={400}>
+        <FadeUp delay={400} variant="zoom-in">
           <div
             id="contact-social-bar"
             className="rounded-3xl bg-gradient-to-r from-[#181818] via-[#151515] to-[#181818] border border-[#2a2a2a] p-6 sm:p-8 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6"

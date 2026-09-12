@@ -1,11 +1,20 @@
 import React, { useState } from 'react';
 import { Project, PROJECTS } from '../data/profileData';
-import { FadeUp } from './FadeUp';
+import { AnimationVariant, FadeUp } from './FadeUp';
 
 interface ProjectsSectionProps {
   onSelectProject: (project: Project) => void;
   onNavigateContact: () => void;
 }
+
+const PROJECT_ANIM_VARIANTS: AnimationVariant[] = [
+  'zoom-up',
+  'zoom-in',
+  'fade-down',
+  'zoom-up',
+  'fade-up',
+  'zoom-in',
+];
 
 export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
   onSelectProject,
@@ -23,7 +32,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
     <section id="projects" className="py-20 md:py-28 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
-        <FadeUp delay={0}>
+        <FadeUp delay={0} variant="fade-down">
           <div className="text-center mb-14">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#fa5a02]/10 border border-[#fa5a02]/30 text-[#fa5a02] text-xs sm:text-sm font-semibold mb-3">
               <i className="fas fa-briefcase text-xs" />
@@ -40,7 +49,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
         </FadeUp>
 
         {/* Filter Pills */}
-        <FadeUp delay={100}>
+        <FadeUp delay={100} variant="zoom-in">
           <div className="flex flex-wrap items-center justify-center gap-2.5 mb-12">
             {categories.map((cat) => {
               const isActive = activeFilter === cat;
@@ -62,14 +71,20 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
           </div>
         </FadeUp>
 
-        {/* Projects Grid with Staggered Fade-Up */}
+        {/* Projects Grid with Dynamic Animation Variants */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project, index) => {
             const isCompleted = project.status === 'Terminé';
             const staggerDelay = (index % 3) * 120;
+            const animVariant = PROJECT_ANIM_VARIANTS[index % PROJECT_ANIM_VARIANTS.length];
 
             return (
-              <FadeUp key={project.id} delay={staggerDelay} className="h-full">
+              <FadeUp
+                key={project.id}
+                delay={staggerDelay}
+                variant={animVariant}
+                className="h-full"
+              >
                 <div
                   id={`project-card-${project.id}`}
                   className="card-hover-effect group relative rounded-2xl bg-gradient-to-b from-[#191919] to-[#131313] border border-[#282828] p-6 sm:p-7 flex flex-col justify-between shadow-xl overflow-hidden h-full"
@@ -140,8 +155,8 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
           })}
         </div>
 
-        {/* Bottom CTA */}
-        <FadeUp delay={200}>
+        {/* Bottom CTA with Zoom-Up */}
+        <FadeUp delay={200} variant="zoom-up">
           <div className="mt-16 text-center">
             <p className="text-gray-400 text-sm mb-4">
               Vous avez une idée de site vitrine pour votre entreprise ou boutique ?

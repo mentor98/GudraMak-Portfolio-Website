@@ -183,7 +183,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         </div>
 
         {/* Section Header for Highlights Bento */}
-        <FadeUp delay={0}>
+        <FadeUp delay={0} variant="fade-down">
           <div className="mt-20 lg:mt-24 text-center max-w-2xl mx-auto mb-12">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#fa5a02]/10 border border-[#fa5a02]/30 text-[#fa5a02] text-xs font-semibold mb-3">
               <i className="fas fa-sparkles text-xs" />
@@ -200,8 +200,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
         {/* Highlights & Specialties Bento Grid with Fade-Up */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-          {/* Bento Card 1 (Spans 2 cols on lg) */}
-          <FadeUp delay={100} className="lg:col-span-2 h-full">
+          {/* Bento Card 1 (Spans 2 cols on lg) with Zoom-Up */}
+          <FadeUp delay={100} variant="zoom-up" className="lg:col-span-2 h-full">
             <div className="card-hover-effect p-7 sm:p-8 rounded-3xl bg-gradient-to-br from-[#181818] via-[#141414] to-[#121212] border border-[#2a2a2a] shadow-xl relative overflow-hidden group h-full flex flex-col justify-between">
               <div>
                 <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
@@ -245,8 +245,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             </div>
           </FadeUp>
 
-          {/* Bento Card 2: Mobile-First */}
-          <FadeUp delay={180} className="h-full">
+          {/* Bento Card 2: Mobile-First with Zoom-In */}
+          <FadeUp delay={180} variant="zoom-in" className="h-full">
             <div className="card-hover-effect p-7 sm:p-8 rounded-3xl bg-gradient-to-br from-[#181818] via-[#141414] to-[#121212] border border-[#2a2a2a] shadow-xl group h-full flex flex-col justify-between">
               <div>
                 <div className="w-14 h-14 rounded-2xl bg-[#202020] border border-[#333] flex items-center justify-center text-[#fa5a02] text-2xl mb-6 shadow-md group-hover:bg-[#fa5a02] group-hover:text-white transition-all">
@@ -276,8 +276,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             </div>
           </FadeUp>
 
-          {/* Bento Card 3: Design UI & Micro-interactions */}
-          <FadeUp delay={220} className="h-full">
+          {/* Bento Card 3: Design UI & Micro-interactions with Fade-Down */}
+          <FadeUp delay={220} variant="fade-down" className="h-full">
             <div className="card-hover-effect p-7 sm:p-8 rounded-3xl bg-gradient-to-br from-[#181818] via-[#141414] to-[#121212] border border-[#2a2a2a] shadow-xl group h-full flex flex-col justify-between">
               <div>
                 <div className="w-14 h-14 rounded-2xl bg-[#202020] border border-[#333] flex items-center justify-center text-[#fa5a02] text-2xl mb-6 shadow-md group-hover:bg-[#fa5a02] group-hover:text-white transition-all">
@@ -304,8 +304,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             </div>
           </FadeUp>
 
-          {/* Bento Card 4 (Spans 2 cols on lg): Featured Project Spotlight */}
-          <FadeUp delay={280} className="lg:col-span-2 h-full">
+          {/* Bento Card 4 (Spans 2 cols on lg): Featured Project Spotlight with Zoom-Up */}
+          <FadeUp delay={280} variant="zoom-up" className="lg:col-span-2 h-full">
             <div className="card-hover-effect p-7 sm:p-8 rounded-3xl bg-gradient-to-br from-[#1c1c1c] to-[#141414] border border-[#333333] shadow-2xl relative overflow-hidden group h-full flex flex-col justify-between">
               <div>
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-5">
@@ -362,8 +362,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           </FadeUp>
         </div>
 
-        {/* 3-Step Work Process Banner */}
-        <FadeUp delay={150}>
+        {/* 3-Step Work Process Banner with Zoom-In */}
+        <FadeUp delay={150} variant="zoom-in">
           <div className="card-hover-effect p-8 sm:p-10 rounded-3xl bg-[#141414] border border-[#242424] shadow-xl">
             <div className="text-center max-w-xl mx-auto mb-10">
               <span className="text-xs text-[#fa5a02] font-bold tracking-widest uppercase">
