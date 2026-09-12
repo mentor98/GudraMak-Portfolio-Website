@@ -36,31 +36,10 @@
       #root {
         min-height: 100vh;
       }
-      @keyframes gudraSpin {
-        to { transform: rotate(360deg); }
-      }
-      @keyframes gudraPulse {
-        0%, 100% { opacity: 0.8; transform: scale(1); }
-        50% { opacity: 1; transform: scale(1.05); }
-      }
     </style>
   </head>
   <body class="bg-[#0f0f0f] text-white antialiased selection:bg-[#fa5a02] selection:text-white">
-    <div id="root">
-      <!-- Instant preloader visible before React initializes -->
-      <div id="app-preloader" style="min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: #0f0f0f; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; gap: 16px;">
-        <div style="position: relative; width: 64px; height: 64px; display: flex; items-center; justify-content: center;">
-          <div style="position: absolute; inset: 0; border-radius: 50%; border: 3px solid rgba(250,90,2,0.15); border-top-color: #fa5a02; animation: gudraSpin 0.9s cubic-bezier(0.55, 0.15, 0.45, 0.85) infinite;"></div>
-          <div style="width: 44px; height: 44px; border-radius: 12px; background: linear-gradient(135deg, #fa5a02, #c73e00); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 20px; color: white; box-shadow: 0 4px 14px rgba(250,90,2,0.4); animation: gudraPulse 1.8s ease-in-out infinite; margin: 10px;">
-            G
-          </div>
-        </div>
-        <div style="text-align: center;">
-          <p style="margin: 0; font-size: 15px; font-weight: 700; color: #ffffff; letter-spacing: 0.04em;">Gudra <span style="color: #fa5a02;">Makuburi</span></p>
-          <p style="margin: 4px 0 0 0; font-size: 11px; color: #888888; text-transform: uppercase; letter-spacing: 0.1em;">Chargement du portfolio...</p>
-        </div>
-      </div>
-    </div>
-    <script type="module" src="/src/main.tsx"></script>
+    <div id="root"></div>
+    <script type="module" src="./src/main.tsx"></script>
   </body>
 </html>
